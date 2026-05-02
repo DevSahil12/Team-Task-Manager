@@ -1,5 +1,5 @@
 [build]
-builder = "NIXPACKS"
+builder = "RAILPACK"
 buildCommand = "mvn clean package -DskipTests"
 
 [deploy]
@@ -8,3 +8,6 @@ healthcheckPath = "/api/auth/login"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
+
+[variables]
+RAILPACK_JDK_VERSION = "21"
